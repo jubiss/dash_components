@@ -206,14 +206,14 @@ def create_slider(id, width, label, value, min=1, max=99, step=5,
     )
     return slider
 
-def radio_items(id, radio_list, default, width=9):
+def radio_items(id, radio_list, default_value, width=9):
     """
     Component used to create Radio buttons for the dashboard.
 
     Args:
         id (str): ID of the component
         radio_list (list): Lists of dictionaries in the following format [{'label': label, 'value': value}] 
-        default (str): Default component value
+        default_value (str): Default component value
 
         width (int): The width of the Radio items.
 
@@ -221,7 +221,7 @@ def radio_items(id, radio_list, default, width=9):
     radio = dbc.Col(
                 dcc.RadioItems(id=id,
                                options=radio_list, 
-                                value=default,
+                                value=default_value,
                                 inline=True,
                                 labelStyle={'display': 'inline-block', 'margin-right': '10px', 'margin-top': '5px'},
                                 style = {'font-size': text_font_size}
