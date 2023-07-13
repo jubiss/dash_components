@@ -1,4 +1,4 @@
-# Dash Components Custom Functions
+# Dash Custom Components
 
 This repository serves as a sub-repository for integrating customized functions for Dash components into your Dash application. If you're developing a Dash application and looking to enhance it with custom features and functionalities, this repository provides a collection of pre-built functions to simplify the customization process.
 
@@ -23,13 +23,13 @@ To integrate the custom functions from this repository into your Dash applicatio
 1. Add this repository as a sub-repository to your Dash application's project directory:
 
 ```bash
-git submodule add https://github.com/your-username/dash-components-custom-functions.git
+git submodule add https://github.com/jubiss/dash_custom_components.git
 ```
 
 2. Change to the sub-repository directory:
 
 ```bash
-cd dash-components-custom-functions
+cd dash_custom_components
 ```
 
 3. Install the required dependencies:
