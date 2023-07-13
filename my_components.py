@@ -2,6 +2,7 @@ import dash_bootstrap_components as dbc
 from dash import html, dash_table, dcc
 text_font_size = '18px'
 
+#Testing components
 def side_navbar(sidebar_name=None, sidebar_description=None, link_list=None):
     """
     Ref: https://dash-bootstrap-components.opensource.faculty.ai/examples/simple-sidebar/page-2
