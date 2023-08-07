@@ -261,6 +261,7 @@ def create_slider(id, width, label, value, min=1, max=99, step=5,
     return slider
 
 def radio_items(id, radio_list, default_value, width=9):
+
     """
     Component used to create Radio buttons for the dashboard.
 
@@ -283,3 +284,31 @@ def radio_items(id, radio_list, default_value, width=9):
                             width=width,
                             )
     return radio
+
+def pandas_profiling_layout(profiling_path):
+    """
+    Creates a layout component for displaying the PandasProfiling report.
+
+    Returns:
+        html.Div: Layout component for the PandasProfiling report page.
+    """
+    return html.Div(
+        [
+            dcc.Markdown(
+                '''
+                # PandasProfiling Report
+                
+                The following is the PandasProfiling report for your data:
+                '''
+            ),
+            html.Iframe(
+                src=profiling_path,
+                style={'width': '100%', 'height': '800px'}
+            )
+        ]
+    )
+
+
+
+
+
