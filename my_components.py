@@ -48,7 +48,7 @@ def side_navbar(sidebar_name=None, sidebar_description=None, link_list=None, foo
 
     return sidebar, CONTENT_STYLE
 
-def navbar(link_list=None, color='white'):
+def navbar(link_list=None, color='gray', color_link="white"):
     """
     Creates a navigation bar component with logo and navigation links.
 
@@ -61,7 +61,7 @@ def navbar(link_list=None, color='white'):
                      ("Page 2", "/Page-2"),]
     nav_link = []
     for link in link_list:
-        nav_link.append(dbc.NavLink(link[0], href=link[1], active="exact", style={"color": "#E57474"}))
+        nav_link.append(dbc.NavLink(link[0], href=link[1], active="exact", style={"color": color_link}))
 
     navbar = dbc.Navbar(
         dbc.Container(
@@ -84,7 +84,7 @@ def navbar(link_list=None, color='white'):
                 ),
             ],
         fluid=True),
-        color="#4B3D6D",
+        color=color,
         className='mb-5',
     )
 
